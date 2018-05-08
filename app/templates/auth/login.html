@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <div class="container"> 
+        <p class="text-center登录</p>
+        {{ wtf.quick_form(form)}}
+        <br>
+        <p>忘记密码了? <a href="{{ url_for('auth.password_reset_request') }}">找回密码</a>.</p>
+        <p><a href="{{ url_for('auth.register') }}">注册</a>.</p>
+    </div>    
+{% endblock %}
